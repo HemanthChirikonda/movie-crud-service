@@ -19,6 +19,12 @@ public class MovieService {
 		
 	}
 	
+	public Movie getbyId(Integer id) {
+		Optional<Movie> movie = repo.findById(id);
+		return movie.get();
+	}
+	
+	
 	public void save(Movie movie) {
 		repo.save(movie);
 	}
